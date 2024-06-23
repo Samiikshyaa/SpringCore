@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class = "com.di.Product" id ="prod">
+        <constructor-arg value = "555"/>
+        <constructor-arg value = "Mobile"/>
+        <constructor-arg value= "50000"/>
+    </bean>
+
+    <bean class="com.di.Car" id = "c">
+        <property name="color" value="Wine Red"/>
+        <property name="model" value="Toyota"/>
+        <property name="price" value="5000000"/>
+    </bean>
+
+    <bean class="com.di.Customer" id = "cust">
+        <property name="id" value="1"/>
+        <property name="name" value="Samikshya"/>
+        <property name="phone" value="6plus"/>
+        <property name="car" ref = "c"/>
+    </bean>
+</beans>
